@@ -1,0 +1,29 @@
+{
+  "name": "soup-to-bits-web-server",
+  "version": "0.0.0",
+  "description": "soup to bits web server",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codeschool/nodejs-soup-to-bits.git"
+  },
+  "keywords": [
+    "soup",
+    "to",
+    "bits"
+  ],
+  "author": "TJ Krusinski <tjkrus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeschool/nodejs-soup-to-bits/issues"
+  },
+  "homepage": "https://github.com/codeschool/nodejs-soup-to-bits",
+  "dependencies": {
+    "axon": "^2.0.0",
+    "express": "^3.5.1",
+    "socket.io": "^0.9.16"
+  }
+}

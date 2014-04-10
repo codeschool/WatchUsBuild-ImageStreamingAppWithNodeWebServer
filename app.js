@@ -4,12 +4,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
-
-var axon = require('axon');
-var socket = axon.socket('sub');
-
-socket.connect('tcp://localhost:8001');
-socket.subscribe('badge');
+var sub = require('./lib/sub');
 
 /**
  *  Have our server listen on port 3000
@@ -18,17 +13,26 @@ server.listen(3000, function(){
   console.log('Server listening on port %d', 3000);
 });
 
+/**
+ *  Server static assets out of the `public` directory
+ */
 app.use(express.static('public'));
-app.use(express.logger('dev'));
 
+/**
+ *  Send the `public/index.html` to the browser
+ */
 app.get('/', function(req, res){
-	res.sendfile('public/index.html');
+  res.sendfile('public/index.html');
 });
 
-io.sockets.on('connection', function(socket){
-  console.log(io.sockets.sockets);
-});
+/**
+ *  Watch for connections
+ */
+io.sockets.on('connection', function(socket){ });
 
-socket.on('message', function(topic, message){
+/**
+ *  When a message comes in from the pub/sub system, send it to the sockets
+ */
+sub.on('message', function(topic, message){
   io.sockets.emit('badge', message);
 });

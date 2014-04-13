@@ -8,3 +8,31 @@
 body {
 	background: black;
 }
+
+.badge-wrapper img {
+	-webkit-transition: all 0.6s ease-out; 
+	-moz-transition: all 0.6s ease-out; 
+	-o-transition: all 0.6s ease-out; 
+	transition: all 0.6s ease-out; 
+
+	-webkit-transform: rotateY(-90deg); 
+	-moz-transform: rotateY(-90deg); 
+	-ms-transform: rotateY(-90deg); 
+	-o-transform: rotateY(-90deg); 
+	transform: rotateY(-90deg); 
+
+	width: 0;
+	height: 200px;
+
+	margin: 20px;
+}
+
+.badge-wrapper img.on {
+	-webkit-transform: rotateY(0deg); 
+	-moz-transform: rotateY(0deg); 
+	-ms-transform: rotateY(0deg); 
+	-o-transform: rotateY(0deg); 
+	transform: rotateY(0deg); 
+
+	width: 200px;
+}

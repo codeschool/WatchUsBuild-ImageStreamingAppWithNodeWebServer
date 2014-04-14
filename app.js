@@ -4,8 +4,9 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
-var sub = require('./lib/sub');
-var badges = require('./lib/badges');
+
+var subSocket = require('./lib/socket');
+var badges = require('./models/badges');
 
 /**
  *  Have our server listen on port 3000
@@ -40,6 +41,6 @@ io.sockets.on('connection', function(socket){
 /**
  *  When a message comes in from the pub/sub system, send it to the sockets
  */
-sub.on('message', function(topic, message){
+subSocket.on('message', function(topic, message){
   io.sockets.emit('badge', message);
 });

@@ -11,8 +11,9 @@ var badges = require('./models/badges');
 /**
  *  Have our server listen on port 3000
  */
-server.listen(3000, function(){
-  console.log('Server listening on port %d', 3000);
+var port = process.env.PORT || 3000;
+server.listen(port, function(){
+  console.log('Server listening on port %d', port);
 });
 
 /**

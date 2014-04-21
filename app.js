@@ -42,6 +42,6 @@ io.sockets.on('connection', function(socket){
 /**
  *  When a message comes in from the pub/sub system, send it to the sockets
  */
-subSocket.on('message', function(channel, message){
-  io.sockets.emit('badge', JSON.parse(message));
+subSocket.on('message', function(message){
+  io.sockets.emit('badge', message);
 });

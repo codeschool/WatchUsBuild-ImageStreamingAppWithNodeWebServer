@@ -2,6 +2,15 @@
 
 var express = require('express');
 var app = express();
+
+/**
+ *  Allows third party clients to connect to the socket server
+ */
+app.use(function(request, response, next) {
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 

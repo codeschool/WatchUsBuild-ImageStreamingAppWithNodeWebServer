@@ -1,39 +1,38 @@
 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background: black;
+  background: black;
   padding: 2em;
 }
 
+.badge-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .badge-wrapper img {
-	-webkit-transition: all 0.6s ease-out; 
-	-moz-transition: all 0.6s ease-out; 
-	-o-transition: all 0.6s ease-out; 
-	transition: all 0.6s ease-out; 
-
-	-webkit-transform: rotateY(-90deg); 
-	-moz-transform: rotateY(-90deg); 
-	-ms-transform: rotateY(-90deg); 
-	-o-transform: rotateY(-90deg); 
-	transform: rotateY(-90deg); 
-
-	width: 0;
-	height: 200px;
-
-	margin: 20px;
+  transition: all 0.6s ease-out;
+  transform: rotateY(-90deg);
+  height: 220px;
+  margin: 20px;
+  opacity: 0;
+  width: 220px;
 }
 
 .badge-wrapper img.on {
-	-webkit-transform: rotateY(0deg); 
-	-moz-transform: rotateY(0deg); 
-	-ms-transform: rotateY(0deg); 
-	-o-transform: rotateY(0deg); 
-	transform: rotateY(0deg); 
-
-	width: 200px;
+  opacity: 1;
+  transform: rotateY(0deg);
 }

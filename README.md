@@ -1,24 +1,27 @@
-## Node.js Soup-To-Bits - Web Server
+## Node.js Watch Us Build - Web Server
 
-This repo is the source code for the Codeschool Node.js Soup-To-Bits Web Server.
+*We changed the name of this series to "Watch Us Build," so you may see an occasional reference to its former name ("Soup to Bits") in this repository.*
 
-Be sure to clone the [pub/sub server](http://github.com/codeschool/nodejs-soup-to-bits-pub-sub-server) and run it also.
+This repo is the source code for the Code School Node.js Watch Us Build Web Server.
+
+Be sure to clone the [pub/sub server](https://github.com/codeschool/WatchUsBuild-ImageStreamingAppWithNodePubSubServer) and run it also.
 
 ### Getting started
 
 To run this server, you'll need a few things:
 
 1. [Node.js](http://nodejs.org) installed
-2. [pub/sub server](http://github.com/codeschool/nodejs-soup-to-bits-pub-sub-server) running
+2. [pub/sub server](https://github.com/codeschool/WatchUsBuild-ImageStreamingAppWithNodePubSubServer) running
 
 Then: 
 
 ```
-$ git clone git@github.com:codeschool/nodejs-soup-to-bits-web-server.git
-$ cd nodejs-soup-to-bits-web-server
+$ git clone https://github.com/codeschool/WatchUsBuild-ImageStreamingAppWithNodeWebServer.git
+$ cd WatchUsBuild-ImageStreamingAppWithNodeWebServer
 $ npm install
 $ node app.js
 ```
+
 ## License
 
 (The MIT License)
